@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice 5</title>
+  </head>
+  <body>
+    <form>
+      <label for="firstNumber">Premier nombre : </label><input type="text" id="firstNumber" name="firstNumber"/><br/>
+      <label for="secondNumber">Deuxième nombre : </label><input type="text" id="secondNumber" name="secondNumber"/><br/>
+      <button  id="submit" onclick="mult()" name ="submit">Valider</button>
+    </form>
+    <script>
+
+      alert('Veuillez entrer des nombres à virgule')
+
+      function mult(){
+
+      var regex = new RegExp(/[0-9.]+.[0-9]/);
+      var firstNumber = document.getElementById('firstNumber').value;
+      var secondNumber = document.getElementById('secondNumber').value;
+
+      firstnumber = Math.trunc(firstNumber);
+      secondnumber = Math.trunc(secondNumber);
+      var result = firstnumber * secondnumber ;
+
+      if (regex.test(firstNumber) & regex.test(secondNumber)){
+        alert(result);
+      }
+      else{
+        alert('Veuillez entrer des chiffres à virgule')
+      }
+}
+
+    </script>
+
+  </body>
+</html>
